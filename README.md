@@ -7,6 +7,6 @@
 
 here's how the app looks like
 
-![alt screenshot1] (/screenshots/1.png "Screenshot of the HTML executed with custom fonts and styling")
+![Alt screenshot1] (/screenshots/1.png "Screenshot of the HTML executed with custom fonts and styling")
 
 #### This doesn't support external CSS yet, it is still on the way and I'll push the code as soon as I build the feature.
