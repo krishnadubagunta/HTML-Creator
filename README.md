@@ -7,6 +7,6 @@
 
 here's how the app looks like
 
-![Image of Yaktocat](https://github.com/krishnadubagunta/HTML-Creator/blob/master/screenshots/1.png)
+![Screenshot of HTML executing custom styles and fonts](/screenshots/1.png)
 
 #### This doesn't support external CSS yet, it is still on the way and I'll push the code as soon as I build the feature.
