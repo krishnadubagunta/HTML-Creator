@@ -1,30 +1,45 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
-.views, textarea, .previewer {
+.views, .text-area-default, .previewer {
   width: 50%;
-  min-height: 82.5vh;
+  min-height: 82vh;
   padding: 10px;
   border: 0.2px solid gray; }
 
 body {
-  scroll-behavior: smooth; }
-  body nav {
-    font-family: "Source Sans Pro", sans-serif;
-    padding: 10px;
-    height: 17.5vh; }
-    body nav h1 {
-      font-size: 3em;
-      color: #27ae60;
-      font-weight: 700;
-      text-align: center; }
-      body nav h1 small {
-        font-size: 0.40em;
-        color: #555;
-        font-weight: 400; }
+  scroll-behavior: smooth;
+  font-size: 16px; }
 
-textarea {
+.navbar {
+  font-family: "Source Sans Pro", sans-serif !important;
+  padding: 10px;
+  height: 17vh;
+  display: flex; }
+  .navbar h1 {
+    font-size: 3em;
+    color: #27ae60;
+    font-weight: 700;
+    text-align: center;
+    flex: auto; }
+    .navbar h1 small {
+      font-size: 0.4em;
+      color: #555;
+      font-weight: 400; }
+  .navbar button {
+    flex-shrink: auto;
+    flex-direction: row;
+    border-radius: 5px;
+    vertical-align: middle;
+    max-height: 30px;
+    font-size: 1.5ch;
+    border: 0px;
+    background-color: #27ae60;
+    color: #fff; }
+
+.text-area-default {
+  font-family: "Source Sans Pro", sans-serif !important;
   float: left;
   resize: none; }
-  textarea:focus {
+  .text-area-default:focus {
     outline: 0px; }
 
 .flex-or-grid {
@@ -36,22 +51,28 @@ textarea {
   color: black;
   border-left: 0px; }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  nav h1 {
-    font-size: 2em; }
-    nav h1 small {
-      font-size: 0.5em; }
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    height: 15vh; }
+    nav h1 {
+      font-size: 2em; }
+      nav h1 small {
+        font-size: 0.5em; }
+  .views, .text-area-default, .previewer {
+    height: 85vh; }
   .flex-or-grid {
     display: block; } }
 
-@media (max-width: 768px) {
-  nav h1 {
-    font-size: 2em; }
-    nav h1 small {
-      font-size: 0.55em; }
+@media (max-width: 500px) {
+  nav {
+    height: 10vh; }
+    nav h1 {
+      font-size: 1em; }
+      nav h1 small {
+        font-size: 0.75em; }
   .flex-or-grid {
     display: block; }
     .flex-or-grid .previewer {
       width: 100%; }
-    .flex-or-grid textarea {
+    .flex-or-grid .text-area-default {
       width: 100%; } }
