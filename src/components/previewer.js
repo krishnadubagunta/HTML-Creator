@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+export let { data } = '';
+
 class Preview extends Component {
 	renderData = () => {
-		return {
-			__html: `${this.props.data}`,
-			__css: ''
-		};
+		data = this.props.data;
+		return { __html: this.props.data };
 	};
 
 	render() {

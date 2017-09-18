@@ -2,42 +2,58 @@
 
 $primary-color : #27ae60
 $primary-accent-text : #555
+$primary-accent-text-light : #fff
 $secondary-color : #222222
 $secondary-accent-text : #ddd
 $font-stack : 'Source Sans Pro', sans-serif
 
 
-$tablet : "(min-width : 768px) and (max-width : 1023px)"
-$phone : "(max-width : 768px)"
-$desktop : "(min-width : 1024px)"
+$tablet : "(min-width : 768px) and (max-width : 1024px)"
+$phone : "(max-width : 500px)"
+$desktop : "(min-width : 1025px)"
 
 .views
 	width: 50%
-	min-height: 82.5vh
+	min-height: 82vh
 	padding: 10px
 	border: 0.2px solid gray
 
 body
 	scroll-behavior: smooth
+	font-size: 16px
 
-	nav
-		font-family: $font-stack
-		padding: 10px
-		height : 17.5vh
+.navbar
+	font-family: $font-stack !important
+	padding: 10px
+	height : 17vh
+	display: flex
 
-		h1
-			font-size: 3em
-			color: $primary-color
-			font-weight: 700
-			text-align: center
+	h1
+		font-size: 3em
+		color: $primary-color
+		font-weight: 700
+		text-align: center
+		flex: auto
 
-			small
-				font-size: 0.40em
-				color: $primary-accent-text
-				font-weight: 400
+		small
+			font-size: 0.4em
+			color: $primary-accent-text
+			font-weight: 400
 
-textarea
+	button
+		flex-shrink: auto
+		flex-direction: row
+		border-radius: 5px
+		vertical-align: middle
+		max-height: 30px
+		font-size: 1.5ch
+		border: 0px
+		background-color: $primary-color
+		color: $primary-accent-text-light
+
+.text-area-default
 	@extend .views
+	font-family: $font-stack !important
 	float: left
 	resize: none
 
@@ -47,6 +63,7 @@ textarea
 
 .flex-or-grid
 	display: flex
+
 
 .previewer
 	@extend .views
@@ -58,20 +75,23 @@ textarea
 
 @media #{$tablet}
 	nav
+		height: 15vh
 		h1
 			font-size: 2em
 			small
 				font-size: 0.5em
-
+	.views
+		height: 85vh
 	.flex-or-grid
 		display: block
 
 @media #{$phone}
 	nav
+		height: 10vh
 		h1
-			font-size: 2em
+			font-size: 1em
 			small
-				font-size: 0.55em
+				font-size: 0.75em
 
 	.flex-or-grid
 		display: block
@@ -79,5 +99,5 @@ textarea
 		.previewer
 			width: 100%
 
-		textarea
+		.text-area-default
 			width: 100%

@@ -14,17 +14,17 @@ class Writer extends Component {
 		this.setState({ data: e.target.value }, () => {
 			this.build(this.state.data);
 		});
-		// let { data, builder } = this.state;
-		// const lastChar = data.charAt(data.length - 1);
-		// if (data.charAt(data.length - 1) === '\n') {
-		// 	builder += lastChar + '<br />';
-		// } else {
-		// 	builder += lastChar;
-		// }
 	};
 
 	render() {
-		return <textarea name="text" onChange={e => this.handleSpecial(e)} />;
+		return (
+			<textarea
+				className="text-area-default"
+				name="text"
+				onChange={e => this.handleSpecial(e)}
+				placeholder="Write your HTML code here"
+			/>
+		);
 	}
 }
 
