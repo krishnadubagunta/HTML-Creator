@@ -22,7 +22,7 @@ class Writer extends Component {
 				className="text-area-default"
 				name="text"
 				onChange={e => this.handleSpecial(e)}
-				placeholder="Write your HTML code here"
+				placeholder="Write your HTML code here, Note : No !important attribute for CSS files"
 			/>
 		);
 	}
